@@ -60,6 +60,7 @@ def update_book(book_id):
     ]):
         abort(400)
     book = {
+        'id': data.get('id', book['id']),
         'title': data.get('title', book['title']),
         'author': data.get('author', book['author']),
         'year': data.get('year', book['year']),
